@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Data Entry Form</h1>
+        </div>
+      </div>
+    </section>
+    <form id="form" class="container m-4 pl-4" method="POST">
+      <div class="field">
+        <label class="label">Family Name</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Family Name"
+            name="FamilyName"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">First Name</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your First Name"
+            name="FirstName"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Middle Name</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Middle Name"
+            name="MiddleName"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Role</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="Role" value="Father" /> Father
+          </label>
+          <label class="radio">
+            <input type="radio" name="Role" value="Mother" /> Mother
+          </label>
+          <label class="radio">
+            <input type="radio" name="Role" value="Child" /> Child
+          </label>
+          <label class="radio">
+            <input type="radio" name="Role" value="Other" /> Other
+          </label>
+        </div>
+      </div>
+     
+      <!-- <div class="field">
+        <label class="label">Last Name</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Last Name"
+            name="Last Name"
+          />
+        </div>
+      </div> 
+
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input
+            class="input"
+            type="email"
+            placeholder="Your Email"
+            name="Email"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input
+            class="input"
+            type="password"
+            placeholder="Your Password"
+            name="Password"
+          />
+        </div>
+      </div>
+ -->
+      <div class="field">
+        <label class="label">Date of Birth</label>
+        <div class="control">
+          <input
+            class="input"
+            type="date"
+            placeholder="Your Date of Birth"
+            name="DOB"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Religion</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Religion"
+            name="Religion"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Ethnicity</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Ethnicity"
+            name="Ethnicity"
+          />
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label">Civil Status</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="CivilStatus" value="Single" /> Single
+          </label>
+          <label class="radio">
+            <input type="radio" name="CivilStatus" value="Married" /> Married
+          </label>
+          <label class="radio">
+            <input type="radio" name="CivilStatus" value="Widowed" /> Widowed
+          </label>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Gender</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="Gender" value="male" /> Male
+          </label>
+          <label class="radio">
+            <input type="radio" name="Gender" value="female" /> Female
+          </label>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Occupation</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Occupation"
+            name="Occupation"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Contact Number</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Contact Number"
+            name="ContactNo"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Agree to Terms</label>
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" name="Agree To Terms" value="yes" /> Confidentiality Clause
+            We respect and uphold the privacy rights of its data subjects and ensure that all personal data information collected is processed pursuant to the general principles of transparency, legitimate purpose and proportionality. 
+            Thus, all personal information collected in this questionnaire will be kept safe and secured pursuant to Republic Act No 10173 (Data Privacy Act of 2012). 
+            Rest assured that your responses will be treated with utmost confidentiality and will be solely used for the stated purpose.
+            Should you have any concerns or wish to exercise your rights under the Data Privacy Act, such as accessing or correcting your personal data, please contact our Purok President.
+            
+            Click "I Agree" if you understand and agree to the provisions in this clause.
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Additional Information</label>
+        <div class="control">
+          <textarea
+            class="textarea"
+            placeholder="Any additional information"
+            name="Notes"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary" type="submit" id="submit-button">
+            Submit
+          </button>
+        </div>
+        <div class="control">
+          <button class="button is-danger">Cancel</button>
+        </div>
+      </div>
+    </form>
+    <div
+      id="message"
+      style="
+        display: none;
+        margin: 20px;
+        font-weight: bold;
+        color: green;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: aquamarine;
+      "
+    ></div>
+
+    <script>
+      document.getElementById("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        document.getElementById("message").textContent = "Submitting..";
+        document.getElementById("message").style.display = "block";
+        document.getElementById("submit-button").disabled = true;
+
+        // Collect the form data
+        var formData = new FormData(this);
+        var keyValuePairs = [];
+        for (var pair of formData.entries()) {
+          keyValuePairs.push(pair[0] + "=" + pair[1]);
+        }
+
+        var formDataString = keyValuePairs.join("&");
+
+        // Send a POST request to your Google Apps Script
+        fetch(
+          "https://script.google.com/macros/s/AKfycbze8mbqg-STiVutL99YriHoBkCYbDzvZ9IPPU53k56eN9hp1qm-JQgbDHe66feINiCQ/exec",
+          {
+            redirect: "follow",
+            method: "POST",
+            body: formDataString,
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          }
+        )
+          .then(function (response) {
+            // Check if the request was successful
+            if (response) {
+              return response; // Assuming your script returns JSON response
+            } else {
+              throw new Error("Failed to submit the form.");
+            }
+          })
+          .then(function (data) {
+            // Display a success message
+            document.getElementById("message").textContent =
+              "Data submitted successfully!";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("message").style.backgroundColor = "green";
+            document.getElementById("message").style.color = "beige";
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("form").reset();
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+          })
+          .catch(function (error) {
+            // Handle errors, you can display an error message here
+            console.error(error);
+            document.getElementById("message").textContent =
+              "An error occurred while submitting the form.";
+            document.getElementById("message").style.display = "block";
+          });
+      });
+    </script>
+  </body>
+</html>
